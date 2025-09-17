@@ -5,6 +5,7 @@
   --graybackground: #f6f6f6;
   --color-black: #52504d;
   --color-blue: #075cd5;
+  --color-primaryBlack: #000000;
 }
 
 @layer components {
