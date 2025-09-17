@@ -1,6 +1,9 @@
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
+
 export default function Main() {
   return (
-    <div className="w-full h-fit pl-8 flex flex-col gap-8">
+    <div className="w-full h-fit pl-8 flex flex-col gap-2">
       <div className="w-full flex gap-8 overflow-x-auto scrollbar-auto scroll-smooth snap-x pr-8">
         <Card
           img="/Wan.webp"
@@ -22,23 +25,39 @@ export default function Main() {
           button="Try Seedream"
         />
       </div>
+      <div className="w-full flex items-center px-6">
+        {/*  empty section */}
+        <div className="flex-1"></div>
 
-      {/* Dots */}
-      <div className="w-full flex justify-center items-center gap-4 cursor-pointer">
-        {Array(9)
-          .fill(null)
-          .map((_, i) => (
-            <div
-              key={i}
-              className="w-3 h-3 rounded-full bg-[var(--color-black)]"
-            ></div>
-          ))}
+        {/* Dots */}
+        <div className="flex justify-center items-center gap-4 cursor-pointer flex-1">
+          {Array(9)
+            .fill(null)
+            .map((_, i) => (
+              <div
+                key={i}
+                className={`w-3 h-3 rounded-full ${
+                  i === 0
+                    ? "bg-[var(--color-black)]"
+                    : " bg-[var(--graybackground)]"
+                }`}
+              ></div>
+            ))}
+        </div>
+
+        {/* Arrows */}
+        <div className="flex justify-end items-center gap-2 flex-1">
+          <div className="flex justify-center items-center cursor-pointer w-8 h-8 rounded-full bg-[var(--graybackground)]">
+            <IoIosArrowBack />
+          </div>
+          <div className="flex justify-center items-center cursor-pointer w-8 h-8 rounded-full bg-[var(--graybackground)]">
+            <IoIosArrowForward />
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-
-<div className="w-full flex justify-end items-center gap-4"></div>;
 
 // card section component
 function Card({
