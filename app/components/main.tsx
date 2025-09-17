@@ -1,7 +1,7 @@
 export default function Main() {
   return (
     <div className="w-full h-fit pl-8">
-      <div className="w-full flex gap-6 overflow-x-auto scrollbar-auto scroll-smooth snap-x">
+      <div className="w-full flex gap-6 overflow-x-auto scrollbar-auto scroll-smooth snap-x pr-8">
         <Card
           img="/Wan.webp"
           title="WAN 2.2 Image generation"
@@ -14,13 +14,6 @@ export default function Main() {
           title="FLUX.1 Krea"
           description="We're making the weight to our FLUX.1 Krea model open source. Download and run our model weights, read and technical report, or generate with it in Krea Image."
           button="Try FLUX.1"
-        />
-        <Card
-          img="/Wan.webp"
-          title="WAN 2.2 Image generation"
-          description="Generate complex images with the brand and powerful WAN 2.2 model.
-              Exeptional prompt adherence and ultra-realistc textures."
-          button="Try WAN 2.2"
         />
         <Card
           img="/Wan.webp"
