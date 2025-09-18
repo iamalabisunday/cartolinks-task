@@ -8,16 +8,26 @@
   --color-primaryBlack: #000000;
 }
 
+.dark {
+  --background: #121212;
+  --graybackground: #1e1e1e;
+  --color-black: #f5f5f5;
+  --color-blue: #4c9aff;
+  --color-primaryBlack: #ffffff;
+}
+
 @layer components {
   .headerstyle {
     @apply cursor-pointer flex justify-center items-center bg-[var(--graybackground)] px-3 py-[0.5rem] rounded-[0.85rem] text-sm;
   }
   .iconSide {
-    @apply w-[20px] h-[20px];
+    @apply w-[1rem] h-[1rem];
   }
 }
 
 body {
   background: var(--background);
+  color: var(--color-black);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }
