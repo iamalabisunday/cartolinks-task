@@ -6,7 +6,6 @@ import { GiFountainPen } from "react-icons/gi";
 import { AiFillEdit } from "react-icons/ai";
 import { GiMicrophone } from "react-icons/gi";
 import { FaPerson } from "react-icons/fa6";
-import { PiChalkboardTeacherFill } from "react-icons/pi";
 import React from "react";
 import { IoLogoChrome } from "react-icons/io";
 
@@ -15,8 +14,10 @@ export default function Generate() {
     <div className="w-full flex flex-col gap-6">
       {/* Header section */}
       <div className="w-full flex justify-between items-center px-8">
-        <p className="font-bold text-[var(--color-primaryBlack)]">Generate</p>
-        <div className="w-fit flex gap-2 items-center text-[var(--color-blue)] font-medium">
+        <p className="font-bold text-[var(--color-primaryBlack)] text-[1.25rem]">
+          Generate
+        </p>
+        <div className="w-fit flex gap-2 items-center text-[var(--color-blue)] font-medium text-[1rem] cursor-pointer">
           <IoIosArrowDown />
           <p>Show all</p>
         </div>
