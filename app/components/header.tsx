@@ -41,16 +41,20 @@ function Logo({ dark }: { dark: boolean }) {
   return (
     <div className="flex gap-6 items-center text-[var(--color-black)]">
       {dark ? (
-        <Image src="/logoWhite.svg" alt="KreaAllogo" width={40} height={40} />
+        <Link href="/">
+          <Image src="/logoWhite.svg" alt="KreaAllogo" width={40} height={40} />
+        </Link>
       ) : (
-        <Image src="/logoBlack.svg" alt="KreaAllogo" width={40} height={40} />
+        <Link href="/">
+          <Image src="/logoBlack.svg" alt="KreaAllogo" width={40} height={40} />{" "}
+        </Link>
       )}
 
-      <div className="flex gap-3 items-center">
+      <Link href="/username" className="flex gap-3 items-center cursor-pointer">
         <GradientBall />
         <p className="text-[0.875rem]">benevolentnimblebt</p>
-        <IoIosArrowDown className="cursor-pointer iconSide" />
-      </div>
+        <IoIosArrowDown className="iconSide" />
+      </Link>
     </div>
   );
 }
@@ -100,17 +104,17 @@ function Services({
 }) {
   return (
     <div className="flex gap-2 justify-center items-center text-[var(--color-black)]">
-      <div className="headerstyle gap-2">
+      <Link href="/gallery" className="headerstyle gap-2">
         <RiGalleryFill className="iconSide" />
         <p>Gallery</p>
-      </div>
-      <div className="headerstyle gap-2">
+      </Link>
+      <Link href="/support" className="headerstyle gap-2">
         <BiSupport className="iconSide" />
         <p>Support</p>
-      </div>
-      <div className="headerstyle">
+      </Link>
+      <Link href="/notification" className="headerstyle">
         <HiMiniBellAlert className="iconSide" />
-      </div>
+      </Link>
 
       {/* Dark Mode Toggle */}
       <div
