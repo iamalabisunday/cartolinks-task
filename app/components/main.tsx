@@ -20,24 +20,24 @@ export default function Main() {
       ),
     },
     {
-      video: "https://s.krea.ai/OSSKreaFlux1_video.mp4",
+      img: "/Flux.webp",
       title: "FLUX.1 Krea",
       description:
         "We're making the weights to our FLUX.1 Krea modal open-source, Download and run our model weights, read the technical report , or generate with it in Krea Image",
       button: (
-        <Link href="/flux1" className="mainbtn">
-          Watch Flux.1
+        <Link href="/seedream" className="mainbtn">
+          Try Flux.1
         </Link>
       ),
     },
     {
-      img: "/Seedream.webp",
+      video: "https://s.krea.ai/OSSKreaFlux1_video.mp4",
       title: "Seedream 4.0",
       description:
         "Try the brand new and record-breaking image generation model Seedream 4.0 by ByteDance.",
       button: (
-        <Link href="/seedream" className="mainbtn">
-          Try Seedream
+        <Link href="/flux1" className="mainbtn">
+          Watch Seedream
         </Link>
       ),
     },
