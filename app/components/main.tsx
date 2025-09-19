@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
@@ -12,21 +13,21 @@ export default function Main() {
       title: "WAN 2.2 Image generation",
       description:
         "Generate complex images with the brand and powerful WAN 2.2 model. Exceptional prompt adherence and ultra-realistic textures.",
-      button: "Try WAN 2.2",
+      button: <Link href="/wan2.2">Try WAN 2.2</Link>,
     },
     {
       video: "https://s.krea.ai/OSSKreaFlux1_video.mp4",
       title: "FLUX.1 Krea",
       description:
         "We're making the weights to our FLUX.1 Krea modal open-source, Download and run our model weights, read the technical report , or generate with it in Krea Image",
-      button: "Watch Flux.1",
+      button: <Link href="/flux1">Watch Flux.1</Link>,
     },
     {
       img: "/Seedream.webp",
       title: "Seedream 4.0",
       description:
         "Try the brand new and record-breaking image generation model Seedream 4.0 by ByteDance.",
-      button: "Try Seedream",
+      button: <Link href="/seedream">Try Seedream</Link>,
     },
   ];
 
