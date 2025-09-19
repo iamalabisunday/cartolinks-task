@@ -127,7 +127,7 @@ function Card({
   video?: string;
   title: string;
   description: string;
-  button: string;
+  button: React.ReactNode;
 }) {
   return (
     <div
