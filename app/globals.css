@@ -23,6 +23,18 @@
   .iconSide {
     @apply w-[1rem] h-[1rem];
   }
+
+  /* Main button Section */
+  .mainbtn {
+    @apply w-fit bg-[var(--background)] py-4 px-6 rounded-full text-[var(--color-black)] text-[0.78rem] font-bold cursor-pointer hover:bg-[var(--color-blue)] hover:text-[var(--background)];
+  }
+
+  /* Generate button Section */
+  .btn {
+    @apply w-fit bg-[var(--graybackground)] py-2 px-5 rounded-full 
+           text-[var(--color-primaryBlack)] font-bold 
+           text-[0.75rem] cursor-pointer transition-colors hover:bg-[var(--color-blue)] hover:text-[var(--background)];
+  }
 }
 
 body {

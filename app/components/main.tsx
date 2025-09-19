@@ -13,21 +13,33 @@ export default function Main() {
       title: "WAN 2.2 Image generation",
       description:
         "Generate complex images with the brand and powerful WAN 2.2 model. Exceptional prompt adherence and ultra-realistic textures.",
-      button: <Link href="/wan2.2">Try WAN 2.2</Link>,
+      button: (
+        <Link href="/wan2.2" className="mainbtn">
+          Try WAN 2.2
+        </Link>
+      ),
     },
     {
       video: "https://s.krea.ai/OSSKreaFlux1_video.mp4",
       title: "FLUX.1 Krea",
       description:
         "We're making the weights to our FLUX.1 Krea modal open-source, Download and run our model weights, read the technical report , or generate with it in Krea Image",
-      button: <Link href="/flux1">Watch Flux.1</Link>,
+      button: (
+        <Link href="/flux1" className="mainbtn">
+          Watch Flux.1
+        </Link>
+      ),
     },
     {
       img: "/Seedream.webp",
       title: "Seedream 4.0",
       description:
         "Try the brand new and record-breaking image generation model Seedream 4.0 by ByteDance.",
-      button: <Link href="/seedream">Try Seedream</Link>,
+      button: (
+        <Link href="/seedream" className="mainbtn">
+          Try Seedream
+        </Link>
+      ),
     },
   ];
 
@@ -161,9 +173,8 @@ function Card({
             <p className="text-[1.85rem] font-[520]">{title}</p>
             <p className="leading-6 tracking-[0.05rem]">{description}</p>
           </div>
-          <button className="w-fit bg-[var(--background)] py-4 px-6 rounded-full text-[var(--color-black)] text-[0.78rem] font-bold cursor-pointer">
-            {button}
-          </button>
+          {/* Button section */}
+          {button}
         </div>
       </div>
     </div>

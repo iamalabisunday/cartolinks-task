@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaRegImage } from "react-icons/fa6";
 import { IoVideocam } from "react-icons/io5";
@@ -17,11 +18,15 @@ export default function Generate() {
         <p className="font-bold text-[var(--color-primaryBlack)] text-[1.25rem]">
           Generate
         </p>
-        <div className="w-fit flex gap-2 items-center text-[var(--color-blue)] font-medium text-[1rem] cursor-pointer">
+        <Link
+          href="/showall"
+          className="w-fit flex gap-2 items-center text-[var(--color-blue)] font-medium text-[1rem] cursor-pointer"
+        >
           <IoIosArrowDown />
           <p>Show all</p>
-        </div>
+        </Link>
       </div>
+
       {/* generate card */}
       <div className="w-full h-auto grid grid-cols-4 gap-6 px-8">
         <GenerateCard
@@ -33,7 +38,11 @@ export default function Generate() {
           title="Image"
           recent="New"
           description="Generate image with custom styles in Flux and Ideogram."
-          button="Open"
+          btn={
+            <Link href="/image" className="btn">
+              Open
+            </Link>
+          }
         />
 
         <GenerateCard
@@ -41,7 +50,11 @@ export default function Generate() {
           iconBg={{ backgroundColor: "oklch(79.55% 0.1875 75.3501)" }}
           title="Video"
           description="Generate Videos with Hailuo, Pika, Runway, Luma, and more."
-          button="open"
+          btn={
+            <Link href="/video" className="btn">
+              Open
+            </Link>
+          }
         />
         <GenerateCard
           icon={<CiPickerHalf className="w-5 h-5" />}
@@ -51,7 +64,11 @@ export default function Generate() {
           }}
           title="Realtime"
           description="Realtime AI rendering on a canvas. Instant feedback loops."
-          button="open"
+          btn={
+            <Link href="/realtime" className="btn">
+              Open
+            </Link>
+          }
         />
 
         <GenerateCard
@@ -63,7 +80,11 @@ export default function Generate() {
           title="Enhancer"
           recent="New"
           description="Upscale and enhance images and videos up to 22K."
-          button="open"
+          btn={
+            <Link href="/enhancer" className="btn">
+              Open
+            </Link>
+          }
         />
         <GenerateCard
           icon={<AiFillEdit className="w-5 h-5" />}
@@ -74,7 +95,11 @@ export default function Generate() {
           title="Edit"
           recent="New"
           description="Add objects, change style, or expand photos and generations"
-          button="open"
+          btn={
+            <Link href="/edit" className="btn">
+              Open
+            </Link>
+          }
         />
         <GenerateCard
           icon={<GiMicrophone className="w-5 h-5" />}
@@ -85,7 +110,11 @@ export default function Generate() {
           title="Video Lipsync"
           recent="New"
           description="Lip sync any video to any audio"
-          button="open"
+          btn={
+            <Link href="/lipsync" className="btn">
+              Open
+            </Link>
+          }
         />
         <GenerateCard
           icon={<FaPerson className="w-5 h-5" />}
@@ -93,14 +122,22 @@ export default function Generate() {
           title="Motion Transfer"
           recent="New"
           description="Transfer motion to images and animate characters."
-          button="open"
+          btn={
+            <Link href="/motion" className="btn">
+              Open
+            </Link>
+          }
         />
         <GenerateCard
           icon={<IoLogoChrome className="w-10 h-10 text-black" />}
           iconBg="bg-[var(--background)]"
           title="Train"
           description="Teach Krea to replicate your style, producrs, or characters."
-          button="open"
+          btn={
+            <Link href="/train" className="btn">
+              Open
+            </Link>
+          }
         />
       </div>
     </div>
@@ -113,14 +150,14 @@ function GenerateCard({
   title,
   recent,
   description,
-  button,
+  btn,
 }: {
   icon?: React.ReactNode;
   iconBg?: string | React.CSSProperties;
   title: string;
   recent?: string;
   description: string;
-  button: string;
+  btn: React.ReactNode;
 }) {
   // detect if iconBg is an object (style) or string (class)
   const isStyle = typeof iconBg === "object";
@@ -159,11 +196,8 @@ function GenerateCard({
           </div>
         </div>
       </div>
-
       {/* Button Section */}
-      <button className="w-fit bg-[var(--graybackground)] py-2 px-5 rounded-full text-[var(--color-primaryBlack)] font-bold text-sm cursor-pointer text-[0.75rem]">
-        {button}
-      </button>
+      {btn}
     </div>
   );
 }
