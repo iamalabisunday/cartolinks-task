@@ -41,13 +41,9 @@ function Logo({ dark }: { dark: boolean }) {
   return (
     <div className="flex gap-6 items-center text-[var(--color-black)]">
       {dark ? (
-        <Link href="/">
-          <Image src="/logoWhite.svg" alt="KreaAllogo" width={40} height={40} />
-        </Link>
+        <Image src="/logoWhite.svg" alt="KreaAllogo" width={40} height={40} />
       ) : (
-        <Link href="/">
-          <Image src="/logoBlack.svg" alt="KreaAllogo" width={40} height={40} />{" "}
-        </Link>
+        <Image src="/logoBlack.svg" alt="KreaAllogo" width={40} height={40} />
       )}
 
       <Link href="/username" className="flex gap-3 items-center cursor-pointer">
